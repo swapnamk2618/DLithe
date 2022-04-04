@@ -1,0 +1,22 @@
+<h1>Registration Form</h1>
+{{ registrationForm.value | json }}
+<form #registrationForm="ngForm">
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="registrationModel.firstName" />
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" placeholder="Last Name" [(ngModel)]="registrationModel.lastName" />
+    <div>
+        <label>Gender</label>
+        <br />
+        <label>Male</label>
+        <input type="radio" name="gender" value="Male" [(ngModel)]="registrationModel.gender" />
+        <label>FeMale</label>
+        <input type="radio" name="gender" value="Female" [(ngModel)]="registrationModel.gender" />
+    </div>
+    <div>
+        <label>County</label>
+        <select name="country" [(ngModel)]="registrationModel.country">
+      <option *ngFor="let country of listofCountry">{{ country }}</option>
+    </select>
+    </div>
+</form>
