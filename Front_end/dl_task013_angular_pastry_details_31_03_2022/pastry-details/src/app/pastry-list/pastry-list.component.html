@@ -1,0 +1,13 @@
+<div  *ngFor="let list of li">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <!-- <mat-card-title>Pastries</mat-card-title> -->
+          <mat-card-title>Pastry:{{list.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="list.path" alt="">
+        <mat-card-actions>
+          <button mat-button >GetDetails</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
