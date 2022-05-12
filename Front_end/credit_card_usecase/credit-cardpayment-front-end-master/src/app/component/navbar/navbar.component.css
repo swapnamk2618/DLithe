@@ -1,0 +1,58 @@
+/*Navbar css design*/
+    *{
+        box-sizing: border-box;
+        padding:0;
+        margin:0;
+    }
+
+    .active{
+        color: orange;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color:black;
+        font-weight: bold;
+        margin-left: 80px; 
+    } 
+
+    .navbar{      
+        padding:20px;
+        font-size: 18px;
+        width:100%;
+        margin-bottom:50px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        background-image: linear-gradient(to right, rgb(101, 154, 185),rgb(40, 172, 99)); 
+    }
+
+    .logo{
+        color:rgb(237, 249, 251);
+        font-weight: bolder;     
+    }
+
+    button{
+        width:120px;
+        height:40px;
+        margin-top:20px;
+        color:white;
+        background-color: red;
+        border-radius: 5px;
+        border:none;  
+        cursor: pointer; 
+        margin-right: 40px;
+    }
+
+    button:hover{
+        background-color: rgb(240, 44, 44);
+    }
+
+    span{
+        font-family: sans-serif;
+        color:rgb(247, 234, 244);
+    }
+    
+    

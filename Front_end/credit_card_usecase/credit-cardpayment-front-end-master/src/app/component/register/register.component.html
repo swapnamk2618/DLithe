@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="regForm" (ngSubmit)="register()">
+        <div class="form-group">
+          <!--name-->
+          <label for="name" class="fa fa-user"></label>
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            formControlName="userName"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              regForm.controls['userName'].touched &&
+              regForm.controls['userName'].hasError('required')
+            "
+          >
+            <br />Name is Required
+          </span>
+        </div>
+        <!--mobile number-->
+        <div class="form-group">
+          <label for="mobileNumber" class="fa fa-mobile"></label>
+          <input
+            type="tel"
+            placeholder="Mobile Number"
+            formControlName="mobileNo"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              regForm.controls['mobileNo'].touched &&
+              regForm.controls['mobileNo'].hasError('required')
+            "
+          >
+            <br />Invalid Mobile Number
+          </span>
+        </div>
+        <!--email-->
+        <div class="form-group">
+          <label for="email" class="fa fa-envelope"></label>
+          <input
+            type="email"
+            placeholder="Email Address"
+            formControlName="userEmail"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              regForm.controls['userEmail'].touched &&
+              regForm.controls['userEmail'].hasError('required')
+            "
+          >
+            <br />Invalid Email Address
+          </span>
+        </div>
+        <!--password-->
+        <div class="form-group">
+          <label for="password" class="fa fa-lock"></label>
+          <input
+            type="password"
+            placeholder="Password"
+            formControlName="userPassword"
+          />
+          <span
+            class="text-danger"
+            *ngIf="
+              regForm.controls['userPassword'].touched &&
+              regForm.controls['userPassword'].hasError('required')
+            "
+          >
+            <br />Atleast 6 character Password is Required
+          </span>
+        </div>
+
+        <div class="text-center">
+          <button
+            id="submitButton"
+            type="submit"
+            class="btn btn-danger"
+            [disabled]="!regForm.valid"
+            (click)="onRegister()"
+           
+          >
+            Register
+          </button>
+        </div>
+
+        <div class="text-success" *ngIf="successMessage">
+          {{ regForm.value.email }} {{ successMessage }}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

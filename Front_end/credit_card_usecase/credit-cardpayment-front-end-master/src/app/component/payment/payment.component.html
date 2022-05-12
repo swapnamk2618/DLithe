@@ -1,0 +1,31 @@
+<!--navbar-->
+<!--Navbar section-->
+
+<header>
+  <nav class="navbar">
+  <h2 class="logo"><span>Make your payment more convenient</span></h2>
+  
+  </nav>
+  <router-outlet></router-outlet>
+  </header>
+
+<!--Navbar section End-->
+
+<div class="mainDiv">
+<div class="radioButton">
+<!-- Default checked -->
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultChecked"  name="defaultExampleRadios" checked mdbInput>
+  <label class="custom-control-label"  for="defaultChecked">Full Payment</label>
+</div>
+<!-- Default unchecked -->
+<div class="custom-control custom-radio">
+  <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
+  <label class="custom-control-label" (click)="partialPayment()" for="defaultUnchecked">Partial Payment</label>
+  <br/><br/>
+  <input *ngIf="payment">
+</div>
+
+<button class="btn text-center"   routerLink="/transaction" >Pay Now</button>
+</div>
+</div>

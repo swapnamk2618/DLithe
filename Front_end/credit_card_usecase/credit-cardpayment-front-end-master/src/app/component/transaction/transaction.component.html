@@ -1,0 +1,27 @@
+<!--Navbar section-->
+
+<header>
+    <nav class="navbar">
+    <h2 class="logo"><span>Transaction History </span></h2>
+    <div class="nav-links">
+        <a routerLink="/auth" routerLinkActive="active"> <button>Logout </button></a>
+    </div>
+    </nav>
+   
+    </header>
+
+<!--Navbar section End-->
+
+<table border="1px">
+    <tr>
+<td>Transaction Id</td>
+<td> Transaction Date</td>
+<td>Transaction Amount</td>
+</tr>
+<tr *ngFor="let std of creditId">
+    <td >{{std.trasactionId}}</td>
+    <td >{{std.transactionAmount}}</td>
+    <td >{{std.transactionDate}}</td>
+    <!-- <td >{{data.creditCardId}}</td> -->
+    </tr>
+</table>
